@@ -38,13 +38,15 @@ public class Main {
     }
 
     public static int calculateDaysDelivery(int deliveryDistance) {
-        int dayDelivery = 0;
+        int dayDelivery;
         if (deliveryDistance < 20) {
             dayDelivery = 1;
         } else if (deliveryDistance > 20 && deliveryDistance < 60) {
             dayDelivery = 2;
         } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
             dayDelivery = 3;
+        } else {
+            dayDelivery = 0;
         }
         return dayDelivery;
     }
